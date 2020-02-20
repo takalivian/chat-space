@@ -15,24 +15,16 @@
     &__top-items{
       height: 20px;
       width: 260px;
-      background-color: #333333;
       margin: 0 20px;
       display: flex;
       justify-content: space-between;
+      color: white;
       &__name{
         line-height: 20px;
       }
       &__icons{
         width: 60px;
-        background-color: green;
         text-align: right;
-        &__btn{
-          display: block;
-          color: white;
-          text-decoration: none;
-          padding-left: 5px;
-          
-        }
       }
     }
   }
@@ -57,4 +49,14 @@
     background-color: #d2d2d2;
     height: 90px;
   }
+}
+
+.contents__btn--edit{
+  color: white;
+  text-decoration: none;
+  padding-left: 5px;
+}
+.contents__btn--icon{
+  color: white;
+  padding-left: 5px;
 }
