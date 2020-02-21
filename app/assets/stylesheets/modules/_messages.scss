@@ -118,5 +118,40 @@
   &__message-form{
     background-color: #d2d2d2;
     height: 90px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 90px;
+    &__new-message{
+      display: flex;
+      justify-content: space-between;
+      height: 50px;
+      background-color: white;
+      line-height: 50px;
+      margin: 20px 15px 20px 40px;
+      width: 100%;
+      &__input-text{
+        padding-left: 10px;
+      }
+      &__input-icon{
+        background-color: blue;
+        padding: 0 10px;
+        &__image{
+          &__file{
+            display: none;
+          }
+        }
+      }
+    }
+    &__submit-btn{
+      background-color: #38aef0;
+      color: white;
+      margin: 20px 40px 20px 0;
+      padding: 0 30px;
+      line-height: 50px;
+      a{
+        text-decoration: none;
+        color: white;
+      }
+    }
   }
 }
