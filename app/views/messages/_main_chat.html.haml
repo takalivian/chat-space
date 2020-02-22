@@ -24,13 +24,11 @@
         お腹いっぱい
   .main-chat__message-form
     .main-chat__message-form__new-message
-      .main-chat__message-form__new-message__input-text
-        %input{type: "text", class:"input-box__text", placeholder: "type a message"}
+      %input{type: "text", class:"text", placeholder: "type a message"}
       .main-chat__message-form__new-message__input-icon
         %label{class: "image"}
           = icon('fas', 'image')
           %input{type:"file", class: "image__file"}
-        %input{type: "submit", class: "submit-btn"}
     .main-chat__message-form__submit-btn
       = link_to "#", class: "btn--send" do
         Send
