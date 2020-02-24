@@ -123,12 +123,18 @@
       justify-content: space-between;
       line-height: 90px;
       &__new-message{
+       
         display: flex;
         justify-content: space-between;
         background-color: white;
         line-height: 50px;
         margin: 20px 15px 20px 40px;
         width: 100%;
+        .new-message{
+          display: flex;
+          width: 100%;
+        
+        }
         .text{
           width: 100%;
           border-style: none;

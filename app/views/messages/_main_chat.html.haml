@@ -24,11 +24,23 @@
         お腹いっぱい
   .main-chat__message-form
     .main-chat__message-form__new-message
-      %input{type: "text", class:"text", placeholder: "type a message"}
-      .main-chat__message-form__new-message__input-icon
-        %label{class: "image"}
-          = icon('fas', 'image')
-          %input{type:"file", class: "image__file"}
-    .main-chat__message-form__submit-btn
-      = link_to "#", class: "btn--send" do
-        Send
+
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'text', placeholder: 'type a message'
+        .main-chat__message-form__new-message__input-icon
+          = f.label :image, class: 'image' do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'image__file'
+        = f.submit 'Send', class: 'btn--send'
+
+
+
+    -# .main-chat__message-form__new-message
+    -#   %input{type: "text", class:"text", placeholder: "type a message"}
+    -#   .main-chat__message-form__new-message__input-icon
+    -#     %label{class: "image"}
+    -#       = icon('fas', 'image')
+    -#       %input{type:"file", class: "image__file"}
+    -# .main-chat__message-form__submit-btn
+    -#   = link_to "#", class: "btn--send" do
+    -#     Send
