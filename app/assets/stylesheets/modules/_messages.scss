@@ -76,6 +76,10 @@
         &__member-list{
           color: #999999;
           font-size: 12px;
+          display: flex;
+          &__member{
+            padding-left: 2px;
+          }
         }
       }
       &__group-edit{
