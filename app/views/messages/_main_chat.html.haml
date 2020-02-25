@@ -9,38 +9,26 @@
       = link_to "#", class: "btn--edit" do
         Edit
   .main-chat__message-list
-    .main-chat__message-list__comment-box
-      .main-chat__message-list__comment-box__name
-        taka
-        .main-chat__message-list__comment-box__name__date
-          2020/02/21(Fri) 10:28:01
-      .main-chat__message-list__comment-box__message
-        お腹すいた
-      .main-chat__message-list__comment-box__name
-        taka
-        .main-chat__message-list__comment-box__name__date
-          2020/02/21(Fri) 10:28:01
-      .main-chat__message-list__comment-box__message
-        お腹いっぱい
+    .messages
+      = render @messages
+     
   .main-chat__message-form
-    .main-chat__message-form__new-message
-
-      = form_for [@group, @message] do |f|
-        = f.text_field :content, class: 'text', placeholder: 'type a message'
-        .main-chat__message-form__new-message__input-icon
-          = f.label :image, class: 'image' do
-            = icon('fas', 'image', class: 'icon')
-            = f.file_field :image, class: 'image__file'
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'text', placeholder: 'type a message'
+      .new_message__input-icon
+        = f.label :image, class: 'new_message__input-icon__image' do
+          = icon('fas', 'image', class: 'image__icon')
+          = f.file_field :image, class: 'new_message__input-icon__image__file'
+      .new_message__input-box
         = f.submit 'Send', class: 'btn--send'
 
 
 
-    -# .main-chat__message-form__new-message
-    -#   %input{type: "text", class:"text", placeholder: "type a message"}
-    -#   .main-chat__message-form__new-message__input-icon
-    -#     %label{class: "image"}
-    -#       = icon('fas', 'image')
-    -#       %input{type:"file", class: "image__file"}
-    -# .main-chat__message-form__submit-btn
-    -#   = link_to "#", class: "btn--send" do
-    -#     Send
+
+  -# .main-chat__message-list__comment-box
+  -#  .main-chat__message-list__comment-box__name
+  -#       taka
+  -#       .main-chat__message-list__comment-box__name__date
+  -#         2020/02/21(Fri) 10:28:01
+  -#     .main-chat__message-list__comment-box__message
+  -#       お腹すいた
