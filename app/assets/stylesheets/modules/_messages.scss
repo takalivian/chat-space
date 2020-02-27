@@ -100,7 +100,8 @@
     &__message-list{
       background-color: #fafafa;
       height: calc(100% - 190px);
-      padding: 35px 0 0 40px;
+      padding: 35px 40px;
+      overflow: scroll;
       &__comment-box{
         display: flex;
         &__name{
@@ -170,5 +171,5 @@
 
 .field_with_errors {
   display: contents;
-  // もしくは diplay: inline;
 }
+
