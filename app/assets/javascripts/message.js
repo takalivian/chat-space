@@ -1,5 +1,4 @@
 $(function(){ 
-  console.log(last_message_id);
       function buildHTML(message){
       if ( message.image ) {
         var html =
@@ -108,7 +107,7 @@ $(function(){
             `<p class="main-chat__message-list__comment-box__message__content">` +
               message.content +
             `</p>` +
-            `<img src="` + message.image + `" class="main-chat__message-list__comment-box__message__image" >` +
+            `<img src="` + message.image + `" class="message__image" >` +
           `</div>` +
         `</div>`
       } else if (message.content) {
@@ -138,7 +137,7 @@ $(function(){
             `</div>` +
           `</div>` +
           `<div class="main-chat__message-list__comment-box__message">` +
-            `<img src="` + message.image + `" class="main-chat__message-list__comment-box__message__image" >` +
+            `<img src="` + message.image + `" class="message__image" >` +
           `</div>` +
         `</div>`
       };
