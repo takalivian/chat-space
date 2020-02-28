@@ -100,7 +100,7 @@ $(function(){
             <p class="main-chat__message-list__comment-box__message__content">
               ${message.content}
             </p>
-            <img src="${message.image} class="message__image" >
+            <img src="${message.image}" class="message__image" >
           </div>
         </div>`
       } else if (message.content) {
