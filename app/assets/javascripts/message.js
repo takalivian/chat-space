@@ -1,44 +1,4 @@
 $(function(){ 
-      function buildHTML(message){
-      if ( message.image ) {
-        var html =
-          `<div class="message" data-message-id=${message.id}>
-            <div class="main-chat__message-list__comment-box">
-              <div class="main-chat__message-list__comment-box__name">
-                ${message.user_name}
-              </div>
-                <div class="main-chat__message-list__comment-box__name__date">
-                  ${message.created_at}
-                </div>
-            </div>
-            <div class="main-chat__message-list__comment-box__message">
-              <p class="main-chat__message-list__comment-box__message__content">
-                ${message.content}
-              </p>
-            </div>
-            <img src=${message.image} >
-          </div>`
-        return html;
-      } else {
-        var html =
-          `<div class="message" data-message-id=${message.id}>
-            <div class="main-chat__message-list__comment-box">
-              <div class="main-chat__message-list__comment-box__name">
-                ${message.user_name}
-              </div>
-              <div class="main-chat__message-list__comment-box__name__date">
-                ${message.created_at}
-              </div>
-            </div>
-            <div class="main-chat__message-list__comment-box__message">
-              <p class="main-chat__message-list__comment-box__message__content">
-                ${message.content}
-              </p>
-            </div>
-          </div>`
-        return html;
-      };
-    }
 
   $('#new_message').on('submit', function(e){
       e.preventDefault();
